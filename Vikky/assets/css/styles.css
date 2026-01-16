@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+}
+body{
+    background-image: url('/assets/images/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+
+}
+h1{
+    font-size: 100px;
+    text-align: center;
+    color: #d36023;
+}
+h1 strong{
+    color: #cfa564;
+    
+}
+hr{
+    border: 1px solid #7c4a25;
+    margin-top: 19px;
+    width: 80%;
+    margin-left: 10%;
+    opacity: .7;
+}
+h3{
+     font-size: 60px;
+    text-align: center;
+    color: #cfa564  ;
+}
+form{
+    background-color: #512b16;
+    height: 390px;
+    width: 370px;
+    box-shadow: 0px 2px 2px 5px #ffd895;
+    margin-left: 65%;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    padding-right: 50px;
+}
+.form1 p{
+    color: white;
+    font-size: 40px;
+    padding: 10px;
+}
+label{
+    color: white;
+    margin-right: 68%;
+    font-size: 18px;
+}
+input{
+    width: 100%;
+    border: none;
+    padding: 10px;
+}
+
+select{
+    width: 106%;
+    padding: 8px;
+}
+select option{
+    background-color: red;
+}
+form button{
+    background-color: #a84600;
+    border: none;
+    padding: 12px;
+    width: 80%;
+    margin-left: 10px;
+    color: #ffe6be;
+    font-size: larger;
+    margin-top: 10px;
+}
