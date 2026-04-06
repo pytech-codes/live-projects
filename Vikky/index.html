@@ -3,48 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Online Hotel Reservation System</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <hr>
-    <h1><strong>Online</strong> Reservation System</h1>
-    <hr><br>
-    <h3>HOST3L <b style="color: #d36023;">&</b> LODGE</h3>
-    <section class="form1">
-        <form action="">
-<p>Book Your Stay</p>
-<label for="" style="margin-right: 72%;">Check in Date</label><br>
-<input type="date"><br><br>
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="wrap">
+            <div class="hero-top">
+                <p class="hero-kicker">DESIGN AND DEPLOYMENT OF AN</p>
+                <h1 class="hero-title">ONLINE HOTEL RESERVATION SYSTEM</h1>
+            </div>
 
-<label for="">Check out Date</label>
-<input type="date" name="" id="">
-<br><br>
-        <label for="" style="margin-right: 102%;">Guests</label>
-<select name="" id="">
-    <option value=""></option>
-    <option value="">2</option>
-    <option value="">3</option>
-    <option value="">4</option>
-    <option value="">5</option>
-</select>
-<br>
-<br>
-        <label for="" style="margin-right: 102%;">Sage</label>
-        <select name="" id="">
-    <option value=""></option>
-    <option value="">2</option>
-    <option value="">3</option>
-    <option value="">4</option>
-    <option value="">5</option>
-</select>
-</div><br>
-<button>
-    Search
-</button>
-        </form>
+            <div class="hero-main">
+                <div class="hero-spacer"></div>
+
+                <form class="booking" action="#">
+                    <h2 class="booking-title">Book Your Stay</h2>
+
+                    <div class="field">
+                        <label for="checkin">Check in Date</label>
+                        <input id="checkin" type="date" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="checkout">Check-out Date</label>
+                        <input id="checkout" type="date" required>
+                    </div>
+
+                    <div class="field-row">
+                        <div class="field">
+                            <label for="guests">Guests</label>
+                            <select id="guests" required>
+                                <option value="1">1</option>
+                                <option value="2" selected>2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="rooms">Rooms</label>
+                            <select id="rooms" required>
+                                <option value="1" selected>1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button class="btn" type="submit">Search</button>
+                </form>
+            </div>
+
+            <section class="features">
+                <div class="feature">
+                    <img src="assets/images/appointments-svgrepo-com.svg" alt="">
+                    <h3>Easy Booking</h3>
+                    <p>Quick and simple reservation process.</p>
+                </div>
+                <div class="feature">
+                    <img src="assets/images/mobile-payment-svgrepo-com.svg" alt="">
+                    <h3>Secure Payments</h3>
+                    <p>Safe and reliable payment options.</p>
+                </div>
+                <div class="feature">
+                    <img src="assets/images/map-hotel-svgrepo-com.svg" alt="">
+                    <h3>Manage Reservations</h3>
+                    <p>View and modify your bookings easily.</p>
+                </div>
+            </section>
+        </div>
+    </header>
+
+    <section class="welcome">
+        <div class="wrap">
+            <h2 class="welcome-title">WELCOME TO OUR HOTEL RESERVATION SYSTEM</h2>
+            <p class="welcome-text">Find the Best Deals and Book Your Perfect Stay</p>
+            <a class="btn btn-small" href="rooms.html">Learn More</a>
+        </div>
     </section>
 
-    
+    <section class="cards">
+        <div class="wrap">
+            <div class="card-grid">
+                <div class="card">
+                    <img src="assets/images/appointments-svgrepo-com.svg" alt="">
+                    <h3>Wide Hotel Selection</h3>
+                    <p>Choose from a variety of hotels worldwide.</p>
+                </div>
+                <div class="card">
+                    <img src="assets/images/mobile-payment-svgrepo-com.svg" alt="">
+                    <h3>24/7 Customer Support</h3>
+                    <p>We are here to assist you anytime.</p>
+                </div>
+                <div class="card">
+                    <img src="assets/images/map-hotel-svgrepo-com.svg" alt="">
+                    <h3>User-Friendly Interface</h3>
+                    <p>Easy to navigate and responsive design.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
 </body>
 </html>

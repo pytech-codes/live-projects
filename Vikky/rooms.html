@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms - Online Hotel Reservation System</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="wrap">
+            <div class="brand">
+                <small>ONLINE HOTEL</small>
+                <a href="index.html">Reservation System</a>
+            </div>
+            <div class="nav">
+                <a href="index.html">Home</a>
+                <a href="rooms.html">Rooms</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html">Login</a>
+                <a href="signup.html">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="rooms-hero">
+        <div class="wrap">
+            <h1 class="rooms-title">Rooms & Suites</h1>
+            <p class="rooms-sub">Browse available rooms and pick the best fit for your stay.</p>
+
+            <div class="filters">
+                <div class="field">
+                    <label for="roomType">Room Type</label>
+                    <select id="roomType">
+                        <option value="all" selected>All</option>
+                        <option value="standard">Standard</option>
+                        <option value="deluxe">Deluxe</option>
+                        <option value="suite">Suite</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="price">Max Price</label>
+                    <select id="price">
+                        <option value="any" selected>Any</option>
+                        <option value="100">$100</option>
+                        <option value="150">$150</option>
+                        <option value="200">$200</option>
+                        <option value="300">$300</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="guests2">Guests</label>
+                    <select id="guests2">
+                        <option value="1">1</option>
+                        <option value="2" selected>2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+
+                <button class="btn" type="button" id="applyFilters">Apply</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="rooms">
+        <div class="wrap">
+            <div class="room-grid" id="roomGrid">
+                <div class="room" data-type="standard" data-price="120" data-guests="2">
+                    <div class="room-img"></div>
+                    <div class="room-body">
+                        <h3 class="room-name">Standard Room</h3>
+                        <p class="room-meta">2 Guests · Free Wi‑Fi · Breakfast</p>
+                        <div class="room-actions">
+                            <a class="btn btn-small" href="#">Book</a>
+                            <span class="price">$120/night</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="room" data-type="deluxe" data-price="180" data-guests="3">
+                    <div class="room-img"></div>
+                    <div class="room-body">
+                        <h3 class="room-name">Deluxe Room</h3>
+                        <p class="room-meta">3 Guests · City View · Breakfast</p>
+                        <div class="room-actions">
+                            <a class="btn btn-small" href="#">Book</a>
+                            <span class="price">$180/night</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="room" data-type="suite" data-price="260" data-guests="4">
+                    <div class="room-img"></div>
+                    <div class="room-body">
+                        <h3 class="room-name">Executive Suite</h3>
+                        <p class="room-meta">4 Guests · Living Area · Premium</p>
+                        <div class="room-actions">
+                            <a class="btn btn-small" href="#">Book</a>
+                            <span class="price">$260/night</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="room" data-type="standard" data-price="140" data-guests="2">
+                    <div class="room-img"></div>
+                    <div class="room-body">
+                        <h3 class="room-name">Standard Plus</h3>
+                        <p class="room-meta">2 Guests · Balcony · Free Wi‑Fi</p>
+                        <div class="room-actions">
+                            <a class="btn btn-small" href="#">Book</a>
+                            <span class="price">$140/night</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="room" data-type="deluxe" data-price="200" data-guests="3">
+                    <div class="room-img"></div>
+                    <div class="room-body">
+                        <h3 class="room-name">Deluxe King</h3>
+                        <p class="room-meta">3 Guests · King Bed · Breakfast</p>
+                        <div class="room-actions">
+                            <a class="btn btn-small" href="#">Book</a>
+                            <span class="price">$200/night</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="room" data-type="suite" data-price="300" data-guests="4">
+                    <div class="room-img"></div>
+                    <div class="room-body">
+                        <h3 class="room-name">Presidential Suite</h3>
+                        <p class="room-meta">4 Guests · Lounge · Premium</p>
+                        <div class="room-actions">
+                            <a class="btn btn-small" href="#">Book</a>
+                            <span class="price">$300/night</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="assets/js/rooms.js"></script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+
+Atiba University, Oyo
+
+
+
+
+
+
+
+Department of Computer Science
+
+
+Project Guide
+
+
+
+?
+Sample of Cover Page:
+DEVELOPMENT OF A WEB BASED HOSTEL ALLOCATION 
+MANAGEMENT SYSTEM FOR ATIBA UNIVERSITY, OYO.
+
+
+
+
+
+ADENUSI DAUDA ADEITE
+(AU22/04/CSC061)
+
+
+
+
+
+
+Month, Year
+TEMPLATE FOR SUBMITTING PROJECT WRITE-UP
+1.	The whole document shall comprise Preliminary pages and the Body of the work.
+2.	The Preliminary pages shall present:
+i.	Title Page
+ii.	Certification 
+iii.	Dedication 
+iv.	Acknowledgements
+v.	Table of Contents
+vi.	List of Figures/Plates
+vii.	List of Tables
+viii.	Abstract
+
+* DECLARATION (sample)
+
+I, (Name: Surname, Other Names), a (put degree) student in the (indicate 
+Department), Atiba University, Oyo, hereby declare that this project titled 
+“indicate title”, submitted by me is based on my original work. Any material(s) 
+obtained from other sources or work done by any other persons or institutions have 
+been duly acknowledged.
+ 
+ 
+-------------------------------------------------------
+Student’s Full Name and Matriculation number
+ 
+----------------------
+Signature & Date
+ 
+
+
+*CERTIFICATION (sample)
+This is to certify that this project has been read and approved as meeting the requirements of the Department of (indicate 
+Department), Atiba University, Oyo, Nigeria, for the Award of (indicate degree).
+
+
+
+___________________
+_______________
+Name
+Date
+(Supervisor)
+
+
+______________________
+________________
+Name
+Date
+(Co-Supervisor) if applicable
+
+
+_______________________                                                             
+Name
+Date
+(Head of Department)
+
+
+
+
+
+*	ACKNOWLEDGEMENTS
+Acknowledgements should follow this order:
+>	Your supervisor first,
+>	Your HOD,
+>	Members of staff of the Department and
+>	others
+
+
+
+3.	The Body of the work shall present the following sections:
+i.	Chapter One- Introduction
+ii.	Chapter Two- Literature Review
+iii.	Chapter Three- Research Methodology
+iv.	Chapter Four: Results and Discussions
+v.	Chapter Five: Summary, Conclusions and Recommendations
+
+     References (recent citations)
+     
+     Further Details guiding Project write-up
+The page number shall be bottom centered and the preliminary pages shall be numbered 
+using Roman (i, ii, iii,…….)numerals and the Body of the work pages numbered  using 
+Arabic numerals (1, 2, 3……….)
+
+
+
+
+
+
+4.	The recommended font type and size for the cover page and project (body) shall be as 
+follows: 
+
+
+
+
+
+
+
+
+
+
+i.	Cover Page(Sample)
+      
+Title of work:			            All Centralized in upper 
+
+Name of student:	case using font size 18
+
+Surname first (All names should be written in full , put comma after surname)
+
+Matriculation Number
+
+Date: Month and Year at the bottom, centre
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sample:
+
+(Title of Project)
+DEVELOPMENT OF A WEB BASED HOSTEL ALLOCATION 
+MANAGEMENT SYSTEM FOR ATIBA UNIVERSITY, OYO-
+TOWN, OYO STATE
+
+BY
+
+(Name of Student: Surname first, other names)
+ (Matric Number)
+
+
+A PROJECT SUBMITTED TO THE DEPARTMENT OF 
+COMPUTER SCIENCE, FACULTY OF NATURAL AND 
+APPLIED SCIENCES,
+ATIBA UNIVERSITY OYO, OYO STATE, NIGERIA
+
+IN PARTIAL FULFILLMENT OF THE REQUIREMENTS OF 
+THE AWARD OF THE DEGREE OF BACHELOR (BSC.) IN 
+COMPUTER SCIENCE
+
+JULY, 2026
+
+
+ii.	Body Work
+?	“Times New Romans”
+?	Font size (body) 12 and 
+?	Double spacing throughout and justified
+?	All major headings (centralized) shall be font 16 
+?	All sub headings following sections shall be flushed to the left using font 
+14
+5.	The Project/ Dissertation / Thesis shall be typed on one side of the paper only, the 
+margin shall be 
+a.	Top- 1 inch
+b.	Bottom- 1 inch
+c.	Right- 1 inch
+d.	Left- 1.5 inches to give allowance for binding.
+e.	Binding colour shall be green 
+
+
+
+
+6.	The outline for the Project is enumerated  as follows: 
+     
+?
+
+      CHAPTER ONE
+
+                                            INTRODUCTION
+1.1	   Background to the Study
+1.2	   Statement of the Problem
+1.3	   Aim and Objectives of the Study
+1.4	   Scope of the Study 
+1.5	   Significance of the Study
+1.6   Expected Contribution to Knowledge
+
+
+CHAPTER  TWO
+LITERATURE REVIEW
+2.1	 Conceptual Issues (As applicable to your work)
+2.2	Review of Methodological Approaches (As applicable to your work)
+2.3	Review of Related Works
+2.4	Table of Related Work
+2.5	Gap identified in the literature (As applicable to your work)
+
+Note: There is no rigidity to the above. The only constant section that must appear in your 
+chapter 2 is review of related works and summary of related works which are usually the last 
+sections of this chapter
+
+
+
+
+CHAPTER THREE
+METHODOLOGY
+3.1. Research Design/Model Specification
+3.2. Research Design Layout
+3.3. Research Instruments/tools 
+ 3.4. Data collection
+       3.5. Data Analysis Techniques/ Software(where applicable)
+       3.6. Requirements Specification
+       3.7. Framework / Model
+       3.8. Modelling / UML Diagram
+
+      Note: The above is as applicable to your work
+
+ 
+
+
+
+
+
+
+	
+
+
+
+CHAPTER FOUR
+RESULT AND DISCUSSION
+4.1. Results
+4.2. Discussions
+4.3. Findings
+ 
+ 
+
+CHAPTER FIVE
+SUMMARY, CONCLUSIONS AND RECOMMENDATIONS
+  5.1. Summary 
+5.2. Conclusions 
+5.3. Recommendations
+
+
+
+REFERENCES
+In compliance with APA 7 (American Psychology Association) Style of referencing. 
+APPENDICES
+APPENDIX I- Start-to-finish Timeline Chart of the Research
+

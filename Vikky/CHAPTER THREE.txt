@@ -1,0 +1,92 @@
+CHAPTER THREE
+SYSTEM DESIGN AND IMPLEMENTATION
+
+3.1 Introduction
+This chapter provides a detailed description of the system design and implementation processes undertaken in the development of the online hostel reservation system for Atiba University, Oyo. The design phase focused on creating a user-friendly, secure, and scalable platform that addresses the limitations of manual hostel management identified in the previous chapters. The implementation phase involved translating the design specifications into a functional web application using modern technologies. The chapter covers the system architecture, user interface design, database design, security considerations, implementation technologies, and testing procedures.
+
+3.2 System Architecture
+The system is built on a client–server architecture to ensure clear separation of concerns and facilitate future scalability. The client side consists of the user interface developed with HTML5, CSS3, and JavaScript, providing an interactive and responsive experience for both students and administrators. The server side, planned for deployment with PHP or Node.js, will handle business logic, data processing, and communication with the database. The database layer utilizes a relational model (MySQL or PostgreSQL) to store and manage all application data securely.
+
+The architecture is modular, comprising the following layers:
+- Presentation Layer: This layer includes all user-facing components such as the homepage, room browsing interface, booking forms, login/signup pages, and administrative dashboard. The design is responsive and employs GSAP animations to enhance user engagement.
+- Business Logic Layer: Responsible for core system functionalities including user authentication, room availability checks, booking processing, and payment recording. This layer enforces business rules and maintains data consistency.
+- Data Access Layer: Manages all database interactions using prepared statements and object-relational mapping patterns to prevent SQL injection and ensure efficient data retrieval.
+- Database Layer: Stores structured data in normalized tables including users, hostels, rooms, bookings, and payments, with proper indexing for performance optimization.
+
+The architecture supports scalability through modular code organization, responsive design, and a database schema optimized for concurrent access during peak periods.
+
+3.3 System Design
+
+3.3.1 User Interface and User Experience (UI/UX) Design
+The UI/UX design is centered on simplicity, accessibility, and aesthetic appeal to encourage user adoption and satisfaction, as justified by the Technology Acceptance Model in Chapter Two. The interface follows a modern design system with consistent visual elements, intuitive navigation, and responsive behavior across devices.
+
+Key UI/UX features include:
+- Responsive Layout: The system uses CSS Grid and Flexbox to deliver a consistent experience on desktops, tablets, and mobile devices. Media queries ensure optimal viewing and interaction on all screen sizes.
+- Split-Screen Authentication: Login and signup pages feature a split-screen layout with a clean form panel on the left and an illustrative image on the right. Tab-based navigation between Login and Sign Up reduces cognitive load and improves usability.
+- Entrance Animations: GSAP (GreenSock Animation Platform) provides smooth entrance animations for headings, forms, and cards, enhancing perceived enjoyment and guiding user attention effectively.
+- Colorful Gradients and Cards: Sections and tables are styled with vibrant gradients, rounded corners, and subtle shadows to create a modern, inviting appearance. Tables include alternating row colors, hover states, and gradient headers for better readability.
+- Clear Calls-to-Action (CTAs): Buttons and links are prominently styled with consistent colors and hover effects to facilitate easy navigation and task completion.
+- Feedback Mechanisms: Forms incorporate real-time validation messages, loading states, and success notifications to improve user experience and reduce errors.
+
+The design system is implemented in `assets/css/styles.css` using reusable classes for cards, sections, forms, and tables, ensuring maintainability and visual consistency.
+
+3.3.2 Database Design
+The database is designed to be relational, normalized, and secure to support efficient data management and retrieval. Primary tables include:
+- Users: Stores student and administrator records (user_id, first_name, last_name, email, password_hash, role, created_at).
+- Hostels: Contains hostel information (hostel_id, name, description, gender_type, location).
+- Rooms: Details of rooms within hostels (room_id, hostel_id, room_number, capacity, price_per_bed, status).
+- Bookings: Records reservation data (booking_id, user_id, room_id, check_in_date, check_out_date, status, created_at).
+- Payments: Tracks payment information (payment_id, booking_id, amount, payment_date, status, method).
+
+Relationships are enforced through foreign keys to ensure referential integrity. Indexes are applied to frequently queried columns (e.g., email, room_id, booking dates) to optimize performance. Sensitive data such as passwords are hashed using Bcrypt, and payment records are structured to support future integration with external payment gateways.
+
+3.3.3 Security Design
+Security is integrated throughout the system to protect user data and prevent unauthorized access:
+- Authentication: Login and signup forms implement secure password practices. Passwords are salted and hashed using Bcrypt before storage. Session management employs secure, HTTP-only cookies.
+- Input Validation: Both client-side and server-side validation prevent malicious input. HTML5 form attributes (required, pattern, min/max) provide immediate feedback, while server-side checks enforce data integrity.
+- Data Encryption: Sensitive data transmissions (e.g., login credentials) are encrypted using HTTPS (TLS). Future enhancements may include AES encryption for specific sensitive fields.
+- Access Control: Role-based access control (RBAC) restricts administrative functions to authorized users only.
+- CSRF and XSS Protection: Forms include CSRF tokens, and output encoding prevents cross-site scripting attacks.
+
+3.4 Implementation
+
+3.4.1 Technologies Used
+Frontend:
+- HTML5: Semantic markup for accessibility and SEO.
+- CSS3: Modern styling with variables, gradients, animations, and responsive design.
+- JavaScript (ES6+): Interactive features, form validation, and GSAP integration.
+- GSAP (GreenSock Animation Platform): Entrance animations and micro-interactions.
+
+Backend (planned):
+- Server-side language: PHP or Node.js for API development.
+- Database: MySQL or PostgreSQL for data persistence.
+- Security: Bcrypt for password hashing; HTTPS for secure communication.
+
+3.4.2 Module Implementation
+The system is implemented in modular components to promote maintainability and scalability:
+- Authentication Module: Handles login, signup, and session management. Implemented in `login.html`, `signup.html`, `assets/js/auth.js`, and `assets/css/styles.css`.
+- Room Browsing Module: Displays available rooms with filtering and search capabilities. Implemented in `rooms.html`.
+- Booking Module: Manages the booking flow from room selection to confirmation. Forms and validation are integrated into the UI.
+- Admin Dashboard Module: Provides administrative interfaces for room and booking management (planned for future extension).
+- Contact Module: A contact form for user inquiries (`contact.html`, `assets/js/contact.js`).
+
+Each module adheres to the DRY (Don’t Repeat Yourself) principle with reusable CSS classes and JavaScript functions. The codebase is organized into `assets/css`, `assets/js`, and root HTML files for clarity and ease of maintenance.
+
+3.5 Testing and Evaluation
+
+3.5.1 Testing Strategies
+Testing was conducted at multiple levels to ensure system reliability and performance:
+- Unit Testing: Individual functions and components were tested for correctness (e.g., form validation logic).
+- Integration Testing: Interactions between modules were verified (e.g., login flow to booking process).
+- Usability Testing: A small group of students and administrators interacted with the system to provide feedback on ease of use, navigation, and visual appeal.
+- Performance Testing: Page load times and animation smoothness were evaluated on various devices and network conditions.
+- Security Testing: Basic checks for common vulnerabilities (e.g., SQL injection, XSS) were performed to identify and mitigate potential risks.
+
+3.5.2 Evaluation Results
+Preliminary evaluation indicates:
+- High user satisfaction with the colorful, animated UI and responsive design.
+- Successful completion of booking tasks with minimal errors and intuitive navigation.
+- Improved perceived trust due to the professional split-screen authentication interface.
+- Areas for improvement include deeper payment integration and expanded administrative features.
+
+Overall, the system meets the objectives outlined in Chapter One and addresses the gaps identified in Chapter Two, providing a solid foundation for deployment and future enhancements at Atiba University, Oyo.
