@@ -449,6 +449,16 @@ select option{
     color: rgba(255, 230, 190, 0.8);
 }
 
+@media (max-width: 1200px){
+    .wrap{
+        width: min(960px, 94%);
+    }
+    
+    .hero{
+        min-height: 680px;
+    }
+}
+
 @media (max-width: 980px){
     .hero-main{
         grid-template-columns: 1fr;
@@ -472,6 +482,675 @@ select option{
 
     .card-grid{
         grid-template-columns: 1fr;
+    }
+    
+    .topbar .wrap{
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px 0;
+    }
+    
+    .nav{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 768px){
+    .wrap{
+        width: min(720px, 96%);
+    }
+    
+    .hero{
+        min-height: 600px;
+        padding: 20px 0 0;
+    }
+    
+    .hero-title{
+        font-size: clamp(28px, 5vw, 42px);
+    }
+    
+    .hero-main{
+        padding: 12px 0 16px;
+    }
+    
+    .booking{
+        padding: 16px 16px 14px;
+    }
+    
+    .field-row{
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .field{
+        gap: 4px;
+    }
+    
+    .field input,
+    .field select{
+        padding: 8px 8px;
+    }
+    
+    .btn{
+        padding: 10px 12px;
+    }
+    
+    .features{
+        gap: 16px;
+        padding: 16px 0 24px;
+    }
+    
+    .feature{
+        padding: 8px 10px;
+    }
+    
+    .feature img{
+        width: 48px;
+        height: 48px;
+    }
+    
+    .feature h3{
+        font-size: 16px;
+    }
+    
+    .welcome{
+        padding: 32px 0;
+        clip-path: ellipse(100% 100% at top);
+    }
+    
+    .welcome-title{
+        font-size: clamp(16px, 2.1vw, 24px);
+    }
+    
+    .welcome-text{
+        font-size: 14px;
+    }
+    
+    .cards{
+        padding: 24px 0 48px;
+    }
+    
+    .card-grid{
+        gap: 16px;
+    }
+    
+    .card{
+        padding: 16px 12px;
+    }
+    
+    .card img{
+        width: 44px;
+        height: 44px;
+    }
+    
+    .card h3{
+        font-size: 16px;
+    }
+    
+    .topbar .wrap{
+        padding: 12px 0;
+    }
+    
+    .brand a{
+        font-size: 16px;
+    }
+    
+    .nav a{
+        font-size: 13px;
+        padding: 4px 8px;
+    }
+    
+    .rooms-hero{
+        padding: 32px 0 20px;
+    }
+    
+    .rooms-title{
+        font-size: clamp(22px, 4vw, 36px);
+    }
+    
+    .filters{
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    
+    .filters .btn{
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+    
+    .room-grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+    
+    .room-img{
+        height: 140px;
+    }
+    
+    .room-body{
+        padding: 12px;
+    }
+    
+    .room-actions{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+    
+    .room-actions .btn{
+        width: 100%;
+    }
+    
+    .price{
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape){
+    .hero{
+        min-height: 500px;
+    }
+    
+    .hero-main{
+        padding: 10px 0 14px;
+    }
+    
+    .booking{
+        padding: 14px 14px 12px;
+    }
+    
+    .field-row{
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    
+    .field{
+        gap: 6px;
+    }
+    
+    .field input,
+    .field select{
+        padding: 10px 10px;
+    }
+    
+    .btn{
+        padding: 12px 14px;
+    }
+    
+    .features{
+        gap: 20px;
+        padding: 20px 0 28px;
+    }
+    
+    .feature{
+        padding: 10px 12px;
+    }
+    
+    .feature img{
+        width: 52px;
+        height: 52px;
+    }
+    
+    .feature h3{
+        font-size: 18px;
+    }
+    
+    .welcome{
+        padding: 36px 0;
+    }
+    
+    .welcome-title{
+        font-size: clamp(18px, 2.3vw, 26px);
+    }
+    
+    .welcome-text{
+        font-size: 16px;
+    }
+    
+    .cards{
+        padding: 28px 0 52px;
+    }
+    
+    .card-grid{
+        gap: 20px;
+    }
+    
+    .card{
+        padding: 18px 14px;
+    }
+    
+    .card img{
+        width: 50px;
+        height: 50px;
+    }
+    
+    .card h3{
+        font-size: 18px;
+    }
+    
+    .topbar .wrap{
+        padding: 14px 0;
+    }
+    
+    .brand a{
+        font-size: 18px;
+    }
+    
+    .nav a{
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+    
+    .rooms-hero{
+        padding: 36px 0 24px;
+    }
+    
+    .rooms-title{
+        font-size: clamp(24px, 4.5vw, 40px);
+    }
+    
+    .filters{
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 12px;
+    }
+    
+    .filters .btn{
+        grid-column: 1 / -1;
+        width: auto;
+    }
+    
+    .room-grid{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+    
+    .room-img{
+        height: 160px;
+    }
+    
+    .room-body{
+        padding: 14px;
+    }
+    
+    .room-actions{
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .room-actions .btn{
+        width: auto;
+    }
+    
+    .price{
+        margin-left: 10px;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px){
+    .wrap{
+        width: 96%;
+    }
+    
+    .hero{
+        min-height: 520px;
+        padding: 16px 0 0;
+    }
+    
+    .hero-top{
+        padding: 4px 0 16px;
+    }
+    
+    .hero-kicker{
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+    
+    .hero-title{
+        font-size: clamp(24px, 6vw, 36px);
+        line-height: 1.2;
+    }
+    
+    .hero-main{
+        padding: 8px 0 12px;
+    }
+    
+    .booking{
+        width: 100%;
+        padding: 14px 12px;
+        border-radius: 10px;
+    }
+    
+    .booking-title{
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    
+    .field{
+        gap: 4px;
+        margin-bottom: 10px;
+    }
+    
+    .field label{
+        font-size: 11px;
+    }
+    
+    .field input,
+    .field select{
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    
+    .field-row{
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    
+    .btn{
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    
+    .btn-small{
+        padding: 8px 20px;
+        font-size: 13px;
+    }
+    
+    .features{
+        gap: 12px;
+        padding: 12px 4px 20px;
+    }
+    
+    .feature{
+        padding: 6px 8px;
+    }
+    
+    .feature img{
+        width: 40px;
+        height: 40px;
+        margin-bottom: 8px;
+    }
+    
+    .feature h3{
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+    
+    .feature p{
+        font-size: 12px;
+    }
+    
+    .welcome{
+        padding: 24px 0;
+    }
+    
+    .welcome-title{
+        font-size: clamp(16px, 4vw, 22px);
+        line-height: 1.3;
+    }
+    
+    .welcome-text{
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+    
+    .cards{
+        padding: 20px 0 36px;
+    }
+    
+    .card-grid{
+        gap: 12px;
+    }
+    
+    .card{
+        padding: 16px 12px;
+    }
+    
+    .card img{
+        width: 44px;
+        height: 44px;
+        margin-bottom: 8px;
+    }
+    
+    .card h3{
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+    
+    .card p{
+        font-size: 12px;
+    }
+    
+    .topbar{
+        position: relative;
+    }
+    
+    .topbar .wrap{
+        flex-direction: column;
+        padding: 16px 0 12px;
+    }
+    
+    .brand{
+        text-align: center;
+    }
+    
+    .brand small{
+        font-size: 10px;
+    }
+    
+    .brand a{
+        font-size: 14px;
+    }
+    
+    .nav{
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+    }
+    
+    .nav a{
+        display: block;
+        text-align: center;
+        padding: 8px;
+        border: 1px solid rgba(255, 216, 149, 0.2);
+        border-radius: 6px;
+        background: rgba(34, 16, 6, 0.3);
+    }
+    
+    .nav a:hover{
+        background: rgba(54, 25, 10, 0.5);
+    }
+    
+    .rooms-hero{
+        padding: 24px 0 16px;
+    }
+    
+    .rooms-title{
+        font-size: clamp(20px, 5vw, 28px);
+        line-height: 1.2;
+    }
+    
+    .rooms-sub{
+        font-size: 14px;
+        margin-top: 8px;
+    }
+    
+    .filters{
+        grid-template-columns: 1fr;
+        gap: 8px;
+        margin-top: 14px;
+    }
+    
+    .filters .field{
+        margin-bottom: 0;
+    }
+    
+    .filters .btn{
+        width: 100%;
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+    
+    .rooms{
+        padding: 20px 0 40px;
+    }
+    
+    .room-grid{
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .room-img{
+        height: 180px;
+    }
+    
+    .room-body{
+        padding: 14px;
+    }
+    
+    .room-name{
+        font-size: 16px;
+        margin-bottom: 4px;
+    }
+    
+    .room-meta{
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+    
+    .room-actions{
+        flex-direction: row;
+        gap: 8px;
+    }
+    
+    .room-actions .btn{
+        padding: 8px 12px;
+        font-size: 12px;
+        flex: 1;
+    }
+    
+    .price{
+        font-size: 14px;
+        text-align: right;
+    }
+    
+    .page{
+        padding: 32px 0 50px;
+    }
+    
+    .page-title{
+        font-size: clamp(18px, 4.5vw, 26px);
+    }
+    
+    .panel{
+        margin-top: 16px;
+        border-radius: 10px;
+    }
+    
+    .panel-body{
+        padding: 14px;
+    }
+    
+    .two-col{
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+    
+    .contact-info h3{
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    
+    .contact-info p{
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+    
+    .form textarea{
+        min-height: 100px;
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    
+    .helper{
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    
+    .auth-split{
+        grid-template-columns: 1fr;
+    }
+    
+    .auth-right{
+        display: none;
+    }
+    
+    .auth-left{
+        padding: 24px 16px;
+    }
+    
+    .auth-inner{
+        width: 100%;
+    }
+    
+    .auth-back{
+        font-size: 12px;
+        margin-bottom: 14px;
+    }
+    
+    .auth-heading{
+        font-size: 20px;
+        margin-bottom: 4px;
+    }
+    
+    .auth-sub{
+        font-size: 12px;
+        margin-bottom: 14px;
+    }
+    
+    .auth-tabs{
+        margin-bottom: 14px;
+    }
+    
+    .auth-tab{
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+    
+    .auth-page .field label{
+        font-size: 11px;
+    }
+    
+    .auth-page .field input,
+    .auth-page .field select{
+        padding: 10px 11px;
+        font-size: 14px;
+    }
+    
+    .auth-btn{
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    
+    .auth-row{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        margin: 8px 0 12px;
+    }
+    
+    .check{
+        font-size: 11px;
+    }
+    
+    .auth-link{
+        font-size: 11px;
+        text-align: center;
+        display: block;
     }
 }
 
@@ -621,6 +1300,110 @@ select option{
     color: #f3d7aa;
 }
 
+@media (max-width: 320px){
+    .hero-title{
+        font-size: clamp(20px, 7vw, 32px);
+    }
+    
+    .booking-title{
+        font-size: 16px;
+    }
+    
+    .field input,
+    .field select{
+        font-size: 13px;
+        padding: 7px 9px;
+    }
+    
+    .btn{
+        font-size: 13px;
+        padding: 9px 11px;
+    }
+    
+    .feature img{
+        width: 36px;
+        height: 36px;
+    }
+    
+    .feature h3{
+        font-size: 13px;
+    }
+    
+    .feature p{
+        font-size: 11px;
+    }
+    
+    .welcome-title{
+        font-size: clamp(14px, 4.5vw, 20px);
+    }
+    
+    .welcome-text{
+        font-size: 13px;
+    }
+    
+    .card img{
+        width: 40px;
+        height: 40px;
+    }
+    
+    .card h3{
+        font-size: 13px;
+    }
+    
+    .card p{
+        font-size: 11px;
+    }
+    
+    .brand a{
+        font-size: 13px;
+    }
+    
+    .nav a{
+        font-size: 12px;
+        padding: 6px;
+    }
+    
+    .rooms-title{
+        font-size: clamp(18px, 5.5vw, 26px);
+    }
+    
+    .room-img{
+        height: 160px;
+    }
+    
+    .room-name{
+        font-size: 15px;
+    }
+    
+    .room-meta{
+        font-size: 11px;
+    }
+    
+    .room-actions .btn{
+        font-size: 11px;
+        padding: 7px 10px;
+    }
+    
+    .price{
+        font-size: 13px;
+    }
+    
+    .auth-heading{
+        font-size: 18px;
+    }
+    
+    .auth-page .field input,
+    .auth-page .field select{
+        font-size: 13px;
+        padding: 9px 10px;
+    }
+    
+    .auth-btn{
+        font-size: 13px;
+        padding: 9px 11px;
+    }
+}
+
 @media (max-width: 980px){
     .filters{
         grid-template-columns: 1fr;
@@ -632,6 +1415,14 @@ select option{
 
     .room-grid{
         grid-template-columns: 1fr;
+    }
+    
+    .auth-split{
+        grid-template-columns: 1fr;
+    }
+
+    .auth-right{
+        display: none;
     }
 }
 

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Events - EventHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <i class="fas fa-calendar-check"></i> EventHub
+            </div>
+            <div class="navbar-nav">
+                <a href="index.html" class="navbar-link">Home</a>
+                <a href="tracking.html" class="navbar-link active">My Events</a>
+                <a href="#" class="navbar-link">About</a>
+                <a href="#" class="navbar-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard-section">
+        <div class="dashboard-header">
+            <h1>My Events Dashboard</h1>
+            <p>Manage your event registrations and tickets</p>
+        </div>
+
+        <!-- Statistics Cards -->
+        <div class="dashboard-stats">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-number" id="totalEvents">0</div>
+                    <div class="stat-label">Total Events</div>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-ticket-alt"></i>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-number" id="upcomingEvents">0</div>
+                    <div class="stat-label">Upcoming</div>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-number" id="pastEvents">0</div>
+                    <div class="stat-label">Past Events</div>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-dollar-sign"></i>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-number" id="totalSpent">$0</div>
+                    <div class="stat-label">Total Spent</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+            <button class="filter-tab active" onclick="filterEvents('all')">
+                <i class="fas fa-list"></i> All Events
+            </button>
+            <button class="filter-tab" onclick="filterEvents('upcoming')">
+                <i class="fas fa-clock"></i> Upcoming
+            </button>
+            <button class="filter-tab" onclick="filterEvents('past')">
+                <i class="fas fa-history"></i> Past
+            </button>
+        </div>
+
+        <!-- Events List -->
+        <div class="events-list" id="eventsList">
+            <!-- Events will be dynamically loaded here -->
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-state" id="emptyState" style="display: none;">
+            <div class="empty-state-icon">
+                <i class="fas fa-calendar-times"></i>
+            </div>
+            <h3>No Events Found</h3>
+            <p>You haven't registered for any events yet.</p>
+            <a href="index.html" class="btn btn-primary">
+                <i class="fas fa-search"></i> Browse Events
+            </a>
+        </div>
+    </section>
+
+    <!-- Event Details Modal -->
+    <div class="modal" id="eventDetailsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Event Details</h3>
+                <button class="modal-close" onclick="closeEventDetailsModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-event-info">
+                    <h4 id="modalEventTitle">Event Title</h4>
+                    <div class="modal-event-details">
+                        <p><i class="fas fa-calendar"></i> <span id="modalEventDate">Date</span></p>
+                        <p><i class="fas fa-clock"></i> <span id="modalEventTime">Time</span></p>
+                        <p><i class="fas fa-map-marker-alt"></i> <span id="modalEventLocation">Location</span></p>
+                        <p><i class="fas fa-ticket-alt"></i> <span id="modalTicketId">Ticket ID</span></p>
+                    </div>
+                </div>
+                
+                <div class="modal-attendee-info">
+                    <h5>Attendee Information</h5>
+                    <p><strong>Name:</strong> <span id="modalAttendeeName">Name</span></p>
+                    <p><strong>Email:</strong> <span id="modalAttendeeEmail">Email</span></p>
+                    <p><strong>Phone:</strong> <span id="modalAttendeePhone">Phone</span></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="viewTicket()">
+                    <i class="fas fa-ticket-alt"></i> View Ticket
+                </button>
+                <button class="btn btn-outline" onclick="shareRegistration()">
+                    <i class="fas fa-share"></i> Share
+                </button>
+                <button class="btn btn-danger" id="cancelBtn" onclick="cancelRegistration()">
+                    <i class="fas fa-times"></i> Cancel Registration
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle"></i>
+            <span id="toastMessage"></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

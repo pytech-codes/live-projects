@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration - WareezHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <a href="index.html" class="navbar-brand">
+                    <img src="assets/images/wahub.png" alt="WAHUB">
+                    WareezHub
+                </a>
+            </div>
+            
+            <div class="navbar-nav">
+                <a href="index.html" class="navbar-link">Home</a>
+                <a href="index.html" class="navbar-link">Events</a>
+                <a href="tracking.html" class="navbar-link">My Tickets</a>
+            </div>
+            
+            <div class="navbar-cta">
+                <a href="index.html" class="btn btn-primary">Browse Events</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Registration Hero Section -->
+    <section class="registration-hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="registration-breadcrumb">
+                <a href="index.html">Home</a>
+                <span>›</span>
+                <a href="index.html">Events</a>
+                <span>›</span>
+                <span id="eventTitle">Loading Event...</span>
+            </div>
+            
+            <h1 id="eventTitle" class="event-title">Register for Event</h1>
+            <p id="eventDescription" class="event-description">Loading event information...</p>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section class="registration-section">
+        <div class="container">
+            <div class="registration-main-content">
+                <!-- Event Header -->
+                <div class="registration-header">
+                    <div class="registration-image-container">
+                        <img id="eventImage" src="" alt="Event" class="registration-image">
+                        <div class="registration-badge" id="eventBadge">Featured</div>
+                    </div>
+                    <div class="registration-info">
+                        <h2 id="eventTitle" class="event-title">Loading...</h2>
+                        <div class="registration-meta">
+                            <span id="eventDate" class="event-date">
+                                <i class="fas fa-calendar"></i>
+                                Loading...
+                            </span>
+                            <span id="eventLocation" class="event-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Loading...
+                            </span>
+                            <span id="eventPrice" class="event-price">Loading...</span>
+                        </div>
+                        <p id="eventCategory" class="event-category">Loading...</p>
+                        <p id="eventOrganizer" class="event-organizer">Loading...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Registration Form -->
+            <div class="registration-form-section">
+                <h2>Complete Your Registration</h2>
+                <form id="registrationForm" class="registration-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="fullName">Full Name *</label>
+                            <input type="text" class="form-input" id="fullName" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email Address *</label>
+                            <input type="email" class="form-input" id="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="phone">Phone Number *</label>
+                            <input type="tel" class="form-input" id="phone" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="tickets">Number of Tickets *</label>
+                            <input type="number" class="form-input" id="tickets" min="1" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="specialRequests">Special Requests (Optional)</label>
+                            <textarea class="form-textarea" id="specialRequests" rows="3" placeholder="Any dietary restrictions, accessibility needs, or special requests?"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-lg">Complete Registration</button>
+                        <button type="button" class="btn btn-outline btn-lg" onclick="window.location.href='index.html'">Back to Events</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="assets/images/wahub.png" alt="WAHUB">
+                        WareezHub
+                    </a>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Platform</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html">Events</a></li>
+                            <li><a href="tracking.html">My Tickets</a></li>
+                            <li><a href="#">About</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                            <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                            <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 WareezHub. All rights reserved.</p>
+                    <p>Made with <i class="fas fa-heart"></i> for event lovers worldwide</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sample Nigerian event data for initialization
+        const sampleEvents = [
+            {
+                id: 1,
+                title: "Nigeria Tech Innovation Summit 2024",
+                category: "Technology",
+                date: "2024-12-15",
+                time: "09:00",
+                location: "Eko Hotels & Suites, Victoria Island, Lagos",
+                price: 299,
+                totalSeats: 500,
+                availableSeats: 127,
+                image: "assets/images/nigerian-tech-summit.jpg",
+                description: "Join Nigeria's brightest tech minds for cutting-edge discussions on fintech, AI, blockchain, and digital transformation in Africa's tech hub.",
+                organizer: "TechHub Nigeria",
+                features: ["WiFi", "Parking", "Catering", "Accessibility", "Live Streaming"]
+            },
+            {
+                id: 2,
+                title: "Nigeria Digital Marketing Masterclass",
+                category: "Marketing",
+                date: "2024-12-20",
+                time: "14:00",
+                location: "Transcorp Hilton, Abuja",
+                price: 149,
+                totalSeats: 200,
+                availableSeats: 89,
+                image: "assets/images/nigerian-marketing-workshop.jpg",
+                description: "Master digital marketing strategies tailored for the African market. Learn social media marketing, content creation, and brand building from Nigerian experts.",
+                organizer: "Digital Marketing Academy Nigeria",
+                features: ["WiFi", "Parking", "Catering", "Workshop Materials", "Certificate"]
+            },
+            {
+                id: 3,
+                title: "Nigeria Startup Founders Conference",
+                category: "Business",
+                date: "2024-12-28",
+                time: "10:00",
+                location: "Landmark Centre, Victoria Island, Lagos",
+                price: 199,
+                totalSeats: 300,
+                availableSeats: 156,
+                image: "assets/images/nigerian-startup-conference.jpg",
+                description: "Connect with Nigerian entrepreneurs, investors, and ecosystem builders. Perfect for founders looking to scale their businesses in Nigeria and across Africa.",
+                organizer: "Startup Nigeria",
+                features: ["WiFi", "Parking", "Networking", "Pitch Sessions", "Investor Meetings"]
+            },
+            {
+                id: 4,
+                title: "Nigeria Creative Design Workshop",
+                category: "Design",
+                date: "2025-01-10",
+                time: "13:00",
+                location: "Creative Hub, Ikoyi, Lagos",
+                price: 189,
+                totalSeats: 50,
+                availableSeats: 23,
+                image: "assets/images/nigerian-design-workshop.jpg",
+                description: "Explore African design aesthetics and techniques in this hands-on workshop. Learn from Nigeria's creative professionals and enhance your design skills.",
+                organizer: "Design Institute Nigeria",
+                features: ["WiFi", "Materials Provided", "Certificate", "Portfolio Review", "Job Placement"]
+            },
+            {
+                id: 5,
+                title: "Nigeria Health & Wellness Expo",
+                category: "Health",
+                date: "2025-01-18",
+                time: "10:00",
+                location: "Tafawa Balewa Square, Abuja",
+                price: 75,
+                totalSeats: 1000,
+                availableSeats: 445,
+                image: "assets/images/nigerian-health-expo.jpg",
+                description: "Discover holistic health and wellness solutions tailored for Nigerians. Features health screenings, fitness demos, and expert talks on well-being.",
+                organizer: "Wellness Nigeria",
+                features: ["WiFi", "Parking", "Health Screenings", "Fitness Demos", "Wellness Products"]
+            },
+            {
+                id: 6,
+                title: "Nigeria Afrobeats Music & Culture Festival",
+                category: "Entertainment",
+                date: "2025-01-25",
+                time: "16:00",
+                location: "Eko Atlantic City, Lagos",
+                price: 50,
+                totalSeats: 5000,
+                availableSeats: 2100,
+                image: "assets/images/nigerian-music-festival.jpg",
+                description: "Experience the best of Nigerian music, arts, and culture at this vibrant festival. Featuring top Afrobeats artists, cultural performances, and local cuisine.",
+                organizer: "Nigerian Entertainment Council",
+                features: ["WiFi", "Parking", "Food Courts", "Cultural Performances", "Artist Meet & Greet"]
+            }
+        ];
+
+        // Featured events
+        const featuredEvents = [
+            {
+                id: 'featured-1',
+                title: 'Nigeria Tech Innovation Summit 2024',
+                category: 'Technology',
+                date: '2024-12-15',
+                time: '09:00',
+                location: 'Eko Hotels & Suites, Victoria Island, Lagos',
+                price: 299,
+                image: 'assets/images/nigerian-tech-summit.jpg',
+                badge: 'Live Now',
+                buttonText: 'Register Now',
+                extraIcon: 'broadcast-tower',
+                extraText: 'Live Stream',
+                description: "Join Nigeria's brightest tech minds for cutting-edge discussions on fintech, AI, blockchain, and digital transformation in Africa's tech hub.",
+                organizer: "TechHub Nigeria",
+                features: ["WiFi", "Parking", "Catering", "Accessibility", "Live Streaming"]
+            },
+            {
+                id: 'featured-2',
+                title: 'Nigeria Business Leadership Summit',
+                category: 'Business',
+                date: '2024-12-22',
+                time: '14:00',
+                location: 'Transcorp Hilton, Abuja',
+                price: 499,
+                image: 'assets/images/nigerian-business-summit.jpg',
+                badge: 'Premium',
+                buttonText: 'Reserve Spot',
+                extraIcon: 'crown',
+                extraText: 'VIP Access',
+                description: "Connect with Nigeria's top business leaders and entrepreneurs for exclusive insights into business growth strategies and leadership development.",
+                organizer: "Business Council Nigeria",
+                features: ["WiFi", "Parking", "Catering", "VIP Access", "Networking"]
+            },
+            {
+                id: 'featured-3',
+                title: 'Nigeria Creative Design Workshop',
+                category: 'Design',
+                date: '2025-01-10',
+                time: '10:00',
+                location: 'Creative Hub, Ikoyi, Lagos',
+                price: 199,
+                image: 'assets/images/nigerian-design-workshop.jpg',
+                badge: 'Exclusive',
+                buttonText: 'Book Workshop',
+                extraIcon: 'palette',
+                extraText: 'Materials Included',
+                description: "Explore African design aesthetics and techniques in this hands-on workshop. Learn from Nigeria's creative professionals and enhance your design skills.",
+                organizer: "Design Institute Nigeria",
+                features: ["WiFi", "Materials Provided", "Certificate", "Portfolio Review", "Job Placement"]
+            }
+        ];
+
+        // Combine all events
+        const allEvents = [...sampleEvents, ...featuredEvents];
+
+        // Load event data from URL parameters
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const eventId = urlParams.get('id');
+            
+            if (eventId) {
+                // Find event data from the combined events array
+                const event = allEvents.find(e => e.id == eventId || e.id === eventId);
+                
+                if (event) {
+                    // Update page content
+                    document.title = `Register for ${event.title} - WareezHub`;
+                    
+                    // Update breadcrumb
+                    const breadcrumb = document.querySelector('.registration-breadcrumb');
+                    if (breadcrumb) {
+                        breadcrumb.innerHTML = `
+                            <a href="index.html">Home</a>
+                            <span>›</span>
+                            <a href="index.html">Events</a>
+                            <span>›</span>
+                            <span>${event.title}</span>
+                        `;
+                    }
+                    
+                    // Update hero section
+                    document.getElementById('eventTitle').textContent = event.title;
+                    document.getElementById('eventDescription').textContent = event.description;
+                    
+                    // Update event image
+                    const eventImage = document.getElementById('eventImage');
+                    if (eventImage) {
+                        eventImage.src = event.image;
+                        eventImage.alt = event.title;
+                    }
+                    
+                    // Update event badge
+                    const eventBadge = document.getElementById('eventBadge');
+                    if (eventBadge && event.category) {
+                        eventBadge.textContent = event.category.charAt(0).toUpperCase() + ' EVENT';
+                        eventBadge.style.display = 'block';
+                    }
+                    
+                    // Update event meta
+                    document.getElementById('eventDate').innerHTML = `<i class="fas fa-calendar"></i> ${formatDate(event.date)}`;
+                    document.getElementById('eventLocation').innerHTML = `<i class="fas fa-map-marker-alt"></i> ${event.location}`;
+                    document.getElementById('eventPrice').innerHTML = `₦${event.price}`;
+                    
+                    // Update event details
+                    document.getElementById('eventCategory').textContent = event.category;
+                    document.getElementById('eventOrganizer').textContent = event.organizer;
+                } else {
+                    // Event not found
+                    document.getElementById('eventTitle').textContent = 'Event Not Found';
+                    document.getElementById('eventDescription').textContent = 'The event you are looking for could not be found.';
+                    document.getElementById('eventImage').style.display = 'none';
+                    document.getElementById('eventBadge').style.display = 'none';
+                }
+            } else {
+                // No event ID provided
+                document.getElementById('eventTitle').textContent = 'No Event Selected';
+                document.getElementById('eventDescription').textContent = 'Please select an event from the events page first.';
+            }
+            
+            // Handle form submission
+            const form = document.getElementById('registrationForm');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                        
+                    // Get form data
+                    const formData = new FormData(form);
+                    const registration = {
+                        eventId: eventId,
+                        fullName: formData.get('fullName'),
+                        email: formData.get('email'),
+                        phone: formData.get('phone'),
+                        tickets: parseInt(formData.get('tickets')),
+                        specialRequests: formData.get('specialRequests'),
+                        registrationDate: new Date().toISOString()
+                    };
+                    
+                    // Validate form
+                    if (!registration.fullName || !registration.email || !registration.phone || !registration.tickets) {
+                        alert('Please fill in all required fields.');
+                        return;
+                    }
+                    
+                    // Save to localStorage
+                    const registrations = JSON.parse(localStorage.getItem('registrations') || '[]');
+                    registrations.push(registration);
+                    localStorage.setItem('registrations', JSON.stringify(registrations));
+                    
+                    // Show success message
+                    alert(`Successfully registered for ${event.title}!`);
+                    
+                    // Redirect to tracking page
+                    window.location.href = 'tracking.html';
+                });
+            }
+        });
+        
+        // Helper function to format date
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return new Date(dateString).toLocaleDateString('en-US', options);
+        }
+    </script>
+</body>
+</html>

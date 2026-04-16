@@ -6,19 +6,50 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 body{
-    background-image: url('/assets/images/background.png');
+    background-image: url('assets/images/background.png');
     justify-content: center;
     align-items: center ;
     color: white;
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 100vh;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+    }
+    
+    nav h1 {
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    ul {
+        margin-left: 0;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 0;
+    }
+    
+    ul li {
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    nav button {
+        margin-top: 10px;
+    }
 }
 
 nav{
-    background-color: transparent;
-    padding: 10px;
-    display: flex;
-    gap: 70px;
+    /* background-color: transparent; */
+    /* padding: 10px; */
+    /* display: flex; */
+    /* gap: 70px; */
 }
 
 ul{
@@ -107,11 +138,13 @@ border-radius: 30px;
 }
 .body2{
     background:linear-gradient(45deg, rgb(0, 56, 211) 0 50%, blue 50% 100%);
-    width: 600px;
+    width: 90%;
+    max-width: 600px;
     height: 200px;
     margin-top: 20px;
     border-radius: 10px;
-    margin-left: 350px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 10px;
 }
 .box{

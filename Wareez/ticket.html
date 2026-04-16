@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Ticket - EventHub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <i class="fas fa-calendar-check"></i> EventHub
+            </div>
+            <div class="navbar-nav">
+                <a href="index.html" class="navbar-link">Home</a>
+                <a href="tracking.html" class="navbar-link">My Events</a>
+                <a href="#" class="navbar-link">About</a>
+                <a href="#" class="navbar-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Ticket Section -->
+    <section class="ticket-section">
+        <div class="ticket-container">
+            <div class="ticket-header">
+                <div class="ticket-logo">
+                    <i class="fas fa-calendar-check"></i>
+                    <span>EventHub</span>
+                </div>
+                <div class="ticket-type">
+                    <span>EVENT TICKET</span>
+                </div>
+            </div>
+
+            <div class="ticket-content">
+                <div class="ticket-main">
+                    <div class="ticket-event-info">
+                        <h2 id="ticketEventTitle" class="ticket-event-title">Loading Event...</h2>
+                        <div class="ticket-event-details">
+                            <div class="ticket-detail-item">
+                                <i class="fas fa-calendar"></i>
+                                <span id="ticketEventDate">Loading...</span>
+                            </div>
+                            <div class="ticket-detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span id="ticketEventTime">Loading...</span>
+                            </div>
+                            <div class="ticket-detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span id="ticketEventLocation">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ticket-attendee-info">
+                        <div class="ticket-attendee-header">
+                            <h3>Attendee Information</h3>
+                            <div class="ticket-price" id="ticketPrice">$0</div>
+                        </div>
+                        <div class="ticket-attendee-details">
+                            <div class="ticket-attendee-item">
+                                <label>Name:</label>
+                                <span id="ticketAttendeeName">Loading...</span>
+                            </div>
+                            <div class="ticket-attendee-item">
+                                <label>Email:</label>
+                                <span id="ticketAttendeeEmail">Loading...</span>
+                            </div>
+                            <div class="ticket-attendee-item">
+                                <label>Phone:</label>
+                                <span id="ticketAttendeePhone">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ticket-sidebar">
+                    <div class="ticket-qr-code">
+                        <div class="qr-code-container">
+                            <div class="qr-code-placeholder">
+                                <div class="qr-code-pattern"></div>
+                                <div class="qr-code-text" id="ticketId">TKT-000000</div>
+                            </div>
+                        </div>
+                        <p class="qr-code-label">Ticket ID</p>
+                    </div>
+
+                    <div class="ticket-status">
+                        <div class="status-badge confirmed">
+                            <i class="fas fa-check-circle"></i>
+                            <span>CONFIRMED</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ticket-footer">
+                <div class="ticket-info">
+                    <p><i class="fas fa-info-circle"></i> Please present this ticket at the venue entrance</p>
+                    <p><i class="fas fa-mobile-alt"></i> Digital copy available on your mobile device</p>
+                </div>
+                <div class="ticket-actions">
+                    <button class="btn btn-outline btn-sm" onclick="printTicket()">
+                        <i class="fas fa-print"></i> Print
+                    </button>
+                    <button class="btn btn-outline btn-sm" onclick="downloadTicket()">
+                        <i class="fas fa-download"></i> Download
+                    </button>
+                    <button class="btn btn-outline btn-sm" onclick="shareTicket()">
+                        <i class="fas fa-share"></i> Share
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Information -->
+        <div class="ticket-info-section">
+            <div class="info-card">
+                <h3><i class="fas fa-info-circle"></i> Important Information</h3>
+                <ul>
+                    <li>Please arrive at least 30 minutes before the event start time</li>
+                    <li>Bring a valid government-issued ID for verification</li>
+                    <li>This ticket is non-transferable and non-refundable</li>
+                    <li>Keep this ticket safe - you'll need it for entry</li>
+                    <li>For questions, contact support@eventhub.com</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3><i class="fas fa-calendar-alt"></i> Event Schedule</h3>
+                <div class="schedule-item">
+                    <span class="schedule-time">6:00 PM</span>
+                    <span class="schedule-activity">Registration & Check-in</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="schedule-time">6:30 PM</span>
+                    <span class="schedule-activity">Welcome Reception</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="schedule-time">7:00 PM</span>
+                    <span class="schedule-activity">Main Event Begins</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="schedule-time">9:00 PM</span>
+                    <span class="schedule-activity">Networking & Closing</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle"></i>
+            <span id="toastMessage"></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

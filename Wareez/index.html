@@ -3,54 +3,355 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>WareezHub - Premium Event Registration System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <h1>WA' REEZ</h1>
-        <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-        <button><a href="">Login</a></button>
-    </nav>
-
-<section class="body1">
-    <h1>Event Registration & Participant Tracking System</h1>
-    <hr>
-    <h3>Simplify your event management with our all in-one platform.
-    </h3>
-        <div class="btn">
-            <button class="btn1">Get Started</button>
-            <button class="btn2">How To</button>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Left: Logo/Brand -->
+            <a href="index.html" class="navbar-brand">
+                <img src="assets/images/wahub.png" alt="WAHUB">
+                WareezHub
+            </a>
+            
+            <!-- Center: Navigation Links -->
+            <div class="navbar-nav">
+                <a href="index.html" class="navbar-link active">Home</a>
+                <a href="#" class="navbar-link">Events</a>
+                <a href="tracking.html" class="navbar-link">My Tickets</a>
+                <a href="#" class="navbar-link">About</a>
+            </div>
+            
+            <!-- Right: CTA Button -->
+            <a href="#" class="navbar-cta">Get Ticket</a>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-</section>
-<section class="body2">
-    <div class="box">
-        <div class="box1">
-         <img src="/assets/images/events.png" alt="event image">
-        <p><b>Easy Registration</b></p>
-        <span>Quick and simple sign-up <br> for your events</span>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <a href="index.html" class="navbar-brand">
+                <img src="assets/images/wahub.png" alt="WAHUB">
+                WareezHub
+            </a>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="mobile-menu-nav">
+            <a href="index.html" class="mobile-menu-link">Home</a>
+            <a href="#" class="mobile-menu-link">Events</a>
+            <a href="tracking.html" class="mobile-menu-link">My Tickets</a>
+            <a href="#" class="mobile-menu-link">About</a>
+            <a href="#" class="mobile-menu-link">Contact</a>
+        </div>
+        <div class="mobile-menu-cta">
+            <a href="#" class="navbar-cta" style="width: 100%; text-align: center;">Get Ticket</a>
+        </div>
     </div>
-    <div class="box2">
-        <img src="/assets/images/reports.png" alt="">
-        <p><b>Detailed Reports</b></p>
-        <span>Get in-depth analytics<br>and reports</span>
-</div>
-    </div>
-</section>
-<section class="body3">
-    <hr id="hr1">
-    <h2>Join Us Today</h2>
-    <hr id="hr2">
-    <p>Sign up now and streamline your event management</p>
-    <div class="footer">
-    <input type="text" placeholder="Enter Your email">
-    <button class="signup">Sign Up</button>
-    </div>
-</section>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Discover Amazing Events</h1>
+            <p class="hero-subtitle">Find, register, and manage your event registrations in one seamless platform</p>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search events by name, location, or category...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+            
+            <!-- Hero Buttons -->
+            <div class="hero-buttons">
+                <button class="btn btn-primary btn-lg" onclick="scrollToEvents()">
+                    <i class="fas fa-calendar"></i> Browse Events
+                </button>
+                <button class="btn btn-outline btn-lg" onclick="showHowTo()">
+                    <i class="fas fa-question-circle"></i> How It Works
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="section-header">
+            <h2>Platform Statistics</h2>
+            <p>Join thousands of users discovering amazing events every day</p>
+        </div>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-number">10,000+</h3>
+                    <p class="stat-label">Events Listed</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-number">50,000+</h3>
+                    <p class="stat-label">Active Users</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-ticket-alt"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-number">100,000+</h3>
+                    <p class="stat-label">Tickets Sold</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-number">4.9</h3>
+                    <p class="stat-label">User Rating</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Events Section -->
+    <section class="featured-section">
+        <div class="section-header">
+            <h2>Featured Events</h2>
+            <p>Handpicked events you don't want to miss</p>
+        </div>
+        <div class="featured-grid">
+            <div class="featured-card">
+                <div class="featured-badge">Live Now</div>
+                <img src="assets/images/featured-tech-conference.jpg" alt="Live Tech Conference" class="featured-image">
+                <div class="featured-content">
+                    <h3>Nigeria Tech Innovation Summit 2024</h3>
+                    <p>Join Nigeria's brightest tech minds for cutting-edge discussions on fintech, AI, blockchain, and digital transformation in Africa's tech hub.</p>
+                    <div class="featured-meta">
+                        <span><i class="fas fa-calendar"></i> Dec 15, 2024</span>
+                        <span><i class="fas fa-map-marker-alt"></i> NIGERIA, LAGOS</span>
+                        <span><i class="fas fa-broadcast-tower"></i> Live Stream</span>
+                    </div>
+                    <a href="register.html?id=featured-1" class="btn btn-primary">Register Now</a>
+                </div>
+            </div>
+            <div class="featured-card">
+                <div class="featured-badge">Premium</div>
+                <img src="assets/images/featured-business-summit.jpg" alt="Nigeria Business Leadership Summit" class="featured-image">
+                <div class="featured-content">
+                    <h3>Nigeria Business Leadership Summit</h3>
+                    <p>Connect with Nigeria's top business leaders and entrepreneurs for exclusive insights into business growth strategies and leadership development.</p>
+                    <div class="featured-meta">
+                        <span><i class="fas fa-calendar"></i> Dec 22, 2024</span>
+                        <span><i class="fas fa-map-marker-alt"></i> NIGERIA, ABUJA</span>
+                        <span><i class="fas fa-crown"></i> VIP Access</span>
+                    </div>
+                    <a href="register.html?id=featured-2" class="btn btn-primary">Reserve Spot</a>
+                </div>
+            </div>
+            <div class="featured-card">
+                <div class="featured-badge">Exclusive</div>
+                <img src="assets/images/featured-design-workshop.jpg" alt="Nigeria Creative Design Workshop" class="featured-image">
+                <div class="featured-content">
+                    <h3>Nigeria Creative Design Workshop</h3>
+                    <p>Explore African design aesthetics and techniques in this hands-on workshop. Learn from Nigeria's creative professionals and enhance your design skills.</p>
+                    <div class="featured-meta">
+                        <span><i class="fas fa-calendar"></i> Jan 10, 2025</span>
+                        <span><i class="fas fa-map-marker-alt"></i> NIGERIA, LAGOS</span>
+                        <span><i class="fas fa-palette"></i> Materials Included</span>
+                    </div>
+                    <a href="register.html?id=featured-3" class="btn btn-primary">Book Workshop</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="section-header">
+            <h2>What Our Users Say</h2>
+            <p>Real experiences from our amazing community</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"WareezHub has transformed how we manage events! The interface is incredibly intuitive and the features are exactly what we needed."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6d21bde6db0?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Sarah Johnson" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Event Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The best event platform I've ever used. Clean design, powerful features, and amazing support!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1500648767791-5e46a946f2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Mike Chen" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Mike Chen</h4>
+                            <p>Tech Entrepreneur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Finally, a platform that understands event management! The analytics and reporting features are game-changers for our team."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108757-1c59ce4c4d28?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Emily Davis" class="testimonial-avatar">
+                        <div class="testimonial-info">
+                            <h4>Emily Davis</h4>
+                            <p>Event Coordinator</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events-section" id="eventsSection">
+        <div class="section-header">
+            <h2>Upcoming Events</h2>
+            <p>Discover and register for exciting events happening near you</p>
+        </div>
+        
+        <div class="events-grid" id="eventsGrid">
+            <!-- Events will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="navbar-brand">
+                        <img src="assets/images/wahub.png" alt="WAHUB">
+                        WareezHub
+                    </a>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Platform</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="tracking.html">My Tickets</a></li>
+                            <li><a href="#">About</a></li>
+                        </ul>
+                    </div>
+                   
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                            <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                            <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 WareezHub. All rights reserved.</p>
+                    <p>Made with <i class="fas fa-heart"></i> for event lovers worldwide</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Registration Modal -->
+    <div class="modal" id="registrationModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Register for Event</h3>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="registrationForm">
+                    <input type="hidden" id="eventId">
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="name">Full Name *</label>
+                        <input type="text" class="form-input" id="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email Address *</label>
+                        <input type="email" class="form-input" id="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="phone">Phone Number *</label>
+                        <input type="tel" class="form-input" id="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="notes">Special Requirements (Optional)</label>
+                        <textarea class="form-input form-textarea" id="notes" placeholder="Any dietary restrictions, accessibility needs, etc."></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-ghost" onclick="closeModal()">Cancel</button>
+                <button type="button" class="btn btn-primary" onclick="submitRegistration()">
+                    <i class="fas fa-check"></i> Complete Registration
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle"></i>
+            <span id="toastMessage"></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
